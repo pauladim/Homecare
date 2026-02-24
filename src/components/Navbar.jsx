@@ -26,7 +26,7 @@ const CustomNavbar = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold" onClick={handleLinkClick}>
-          <img src="/realogo.png" alt="" width="90" height="40" className="d-inline-block align-top" />
+          <img src="/realogo.png" alt="" width="78" height="40" className="d-inline-block align-top" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"

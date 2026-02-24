@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   Facebook, 
   Twitter, 
@@ -12,6 +12,8 @@ import {
 } from '@mui/icons-material';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const handleLinkClick = (e, path) => {
     e.preventDefault();
     
@@ -21,10 +23,8 @@ const Footer = () => {
       behavior: 'smooth'
     });
     
-    // Navigate to the target page after a short delay to allow scrolling
-    setTimeout(() => {
-      window.location.href = path;
-    }, 300);
+    // Navigate instantly using React Router (no reload!)
+    navigate(path);
   };
 
   return (
@@ -37,18 +37,7 @@ const Footer = () => {
               Providing compassionate and professional home care services to enhance the quality of life for you and your loved ones.
             </p>
             <div className="d-flex gap-3">
-              {/* <a href="#" className="text-white">
-                <Facebook />
-              </a> */}
-              {/* <a href="#" className="text-white">
-                <Twitter />
-              </a> */}
-              {/* <a href="#" className="text-white">
-                <Instagram />
-              </a> */}
-              {/* <a href="#" className="text-white">
-                <LinkedIn />
-              </a> */}
+              {/* Social icons remain commented out as in your original */}
             </div>
           </Col>
           
@@ -82,11 +71,11 @@ const Footer = () => {
                   Services
                 </Link>
               </li>
-               <li className="mb-2">
+              <li className="mb-2">
                 <Link 
                   to="/resources" 
                   className="text-decoration-none text-orange"
-                  onClick={(e) => handleLinkClick(e, 'resources')}
+                  onClick={(e) => handleLinkClick(e, '/resources')} // ✅ Now has leading slash
                 >
                   Resources
                 </Link>
@@ -120,23 +109,6 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          
-          {/* <Col md={3} className="mb-4">
-            <h6 className="text-green mb-3">Newsletter</h6>
-            <p className="text-light-black mb-3">
-              Subscribe to our newsletter for health tips and updates.
-            </p>
-            <div className="d-flex">
-              <input 
-                type="email" 
-                className="form-control rounded-0" 
-                placeholder="Your email"
-              />
-              <button className="btn btn-primary-orange rounded-0">
-                Subscribe
-              </button>
-            </div>
-          </Col> */}
         </Row>
         
         <hr className="my-4 bg-light-black" />

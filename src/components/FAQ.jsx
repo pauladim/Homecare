@@ -21,7 +21,7 @@ const FAQ = () => {
   const faqs = [
     {
       id: 'panel1',
-      question: "What types of home care services do you provide?",
+      question: "What home care services do you offer?",
       answer: "We offer comprehensive non-medical home care services including personal care assistance, medication reminders, meal preparation, light housekeeping, mobility support, and companionship care. Our services are tailored to meet individual needs and promote independence."
     },
     {
@@ -46,7 +46,7 @@ const FAQ = () => {
     },
     {
       id: 'panel6',
-      question: "Do you accept insurance or Medicare or Private Pay?",
+      question: "Do you take insurance or private pay?",
       answer: "We work with various insurance providers and can help navigate coverage options. While Medicare typically doesn't cover custodial care, we assist with private insurance claims and provide documentation for reimbursement when applicable."
     }
   ];
