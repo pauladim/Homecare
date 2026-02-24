@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { 
   Accordion, 
@@ -10,28 +10,49 @@ import {
   ExpandMore as ExpandMoreIcon,
   QuestionAnswer as QuestionIcon
 } from '@mui/icons-material';
+import { Link, useLocation } from 'react-router-dom';
 
 const FAQ = () => {
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    // whenever the FAQ component is shown (i.e. path is /faq) make sure
+    // the viewport is reset to the top. This handles navigation from the
+    // contact page (or anywhere else) so the user doesn’t land partway down.
+    if (location.pathname === '/faq') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, [location]);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const faqs = [
     {
       id: 'panel1',
-      question: "What home care services do you offer?",
+      question: "What we offer?",
       answer: "We offer comprehensive non-medical home care services including personal care assistance, medication reminders, meal preparation, light housekeeping, mobility support, and companionship care. Our services are tailored to meet individual needs and promote independence."
     },
     {
       id: 'panel2',
-      question: "Are your caregivers licensed and insured?",
+      question: "Are your caregivers licensed?",
       answer: "Yes, all our caregivers are fully licensed, certified, and insured. We conduct thorough background checks, verify credentials, and provide ongoing training to ensure the highest standards of care and safety for our clients."
     },
     {
       id: 'panel3',
-      question: "How do you match caregivers with clients?",
+      question: "Caregiver matching?",
       answer: "We carefully assess each client's needs, preferences, and personality to match them with the most suitable caregiver. Our matching process considers factors like care requirements, scheduling needs, and personal compatibility to ensure the best possible relationship."
     },
     {
@@ -46,7 +67,7 @@ const FAQ = () => {
     },
     {
       id: 'panel6',
-      question: "Do you take insurance or private pay?",
+      question: "Insurance or private pay?",
       answer: "We work with various insurance providers and can help navigate coverage options. While Medicare typically doesn't cover custodial care, we assist with private insurance claims and provide documentation for reimbursement when applicable."
     }
   ];

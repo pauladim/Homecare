@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-white pt-5 pb-4">
       <Container>
-        <Row>
+        <Row className="justify-content-center">
           <Col md={4} className="mb-4">
             <h5 className="text-green mb-3">RejulzHomeCare</h5>
             <p className="text-light-black">
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </Col>
           
-          <Col md={2} className="mb-4">
+          <Col md={4} className="mb-4">
             <h6 className="text-green mb-3">Quick Links</h6>
             <ul className="list-unstyled">
               <li className="mb-2">
@@ -92,7 +92,7 @@ const Footer = () => {
             </ul>
           </Col>
           
-          <Col md={3} className="mb-4">
+          <Col md={4} className="mb-4">
             <h6 className="text-green mb-3">Contact Us</h6>
             <ul className="list-unstyled">
               <li className="mb-2 d-flex align-items-start">

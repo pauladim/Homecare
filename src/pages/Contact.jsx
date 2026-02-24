@@ -280,14 +280,14 @@ const templateParams = {
           <Col lg={5}>
             <Card className="card-custom h-100 border-0">
               <Card.Body className="p-5">
-                <h2 className="h3 text-green mb-4">Find Us</h2>
+                {/* <h2 className="h3 text-green mb-4">Find Us</h2>
                 <div className="bg-light rounded" style={{ height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <div className="text-center">
-                    <LocationOn sx={{ fontSize: 60 }} className="text-green mb-3" />
+                  <div className="text-center"> */}
+                    {/* <LocationOn sx={{ fontSize: 60 }} className="text-green mb-3" /> */}
                     {/* <p className="text-black mb-0">Interactive Map</p> */}
-                    <p className="text-black small">Atlanta, Georgia</p>
-                  </div>
-                </div>
+                    {/* <p className="text-black small">Atlanta, Georgia</p> */}
+                  {/* </div>
+                </div> */}
                 <div className="mt-4">
                   <h5 className="text-green mb-3">Quick Links</h5>
                   <ul className="list-unstyled">
@@ -317,6 +317,7 @@ const templateParams = {
             </Card>
           </Col>
         </Row>
+        {/* <FAQ /> */}
         {/* <FAQ /> */}
       </Container>
     </section>

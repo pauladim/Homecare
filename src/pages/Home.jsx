@@ -54,14 +54,28 @@ const Home = () => {
           className="mySwiper w-100 h-100"
         >
           <SwiperSlide>
-            <div className="slide-overlay position-relative">
-              <img src="/familyhome.jpeg" alt="" className="img-fluid w-100"/>
-              <div className="overlay-content position-absolute top-50 start-50 translate-middle text-center w-100">
+            <div className="position-relative w-100 h-100">
+              <img 
+                src="/familyhome.jpeg" 
+                alt="Family enjoying home care" 
+                className="img-fluid w-100 h-100 object-fit-cover"
+              />
+              {/* Semi-transparent dark overlay */}
+              <div 
+                className="position-absolute top-0 start-0 w-100 h-100"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)', zIndex: 1 }}
+              ></div>
+              {/* Content Overlay */}
+              <div 
+                className="position-absolute top-50 start-50 translate-middle text-center w-100"
+                style={{ zIndex: 2 }}
+              >
                 <h2 className="display-4 fw-bold text-white mb-4">
                   Where Care Meets Connection
                 </h2>
-                <p className="lead fs-3 text-black mb-5">
-                 Compassionate, personalized home care that nurtures independence, joy, and dignity <br />because every moment matters.
+                <p className="lead fs-3 text-white mb-5">
+                  Compassionate, personalized home care that nurtures independence, joy, and dignity<br />
+                  because every moment matters.
                 </p>
                 <Link to="/contact">
                   <Button 
@@ -75,15 +89,28 @@ const Home = () => {
               </div>
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="slide-overlay-2 position-relative">
-              <img src="/smile.jpeg" alt="" className="img-fluid w-100" />
-              <div className="overlay-content position-absolute top-50 start-50 translate-middle text-center w-100">
+            <div className="position-relative w-100 h-100">
+              <img 
+                src="/smile.jpeg" 
+                alt="Caregiver and senior smiling together" 
+                className="img-fluid w-100 h-100 object-fit-cover"
+              />
+              <div 
+                className="position-absolute top-0 start-0 w-100 h-100"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)', zIndex: 1 }}
+              ></div>
+              <div 
+                className="position-absolute top-50 start-50 translate-middle text-center w-100"
+                style={{ zIndex: 2 }}
+              >
                 <h2 className="display-4 fw-bold text-white mb-4">
                   Care That Feels Like Family
                 </h2>
-                <p className="lead fs-3 text-black mb-5">
-                  Building meaningful connections while providing compassionate,<br /> reliable care for your love ones.
+                <p className="lead fs-3 text-white mb-5">
+                  Building meaningful connections while providing compassionate,<br />
+                  reliable care for your loved ones.
                 </p>
                 <Link to="/contact">
                   <Button 
@@ -97,14 +124,26 @@ const Home = () => {
               </div>
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="slide-overlay-3 position-relative">
-              <img src="/womaan.jpg" alt="" className="img-fluid w-100"/>
-              <div className="overlay-content position-absolute top-50 start-50 translate-middle text-center w-100">
+            <div className="position-relative w-100 h-100">
+              <img 
+                src="/womaan.jpg" 
+                alt="Caregiver supporting elderly woman" 
+                className="img-fluid w-100 h-100 object-fit-cover"
+              />
+              <div 
+                className="position-absolute top-0 start-0 w-100 h-100"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)', zIndex: 1 }}
+              ></div>
+              <div 
+                className="position-absolute top-50 start-50 translate-middle text-center w-100"
+                style={{ zIndex: 2 }}
+              >
                 <h2 className="display-4 fw-bold text-white mb-4">
                   Quality Elderly Care
                 </h2>
-                <p className="lead fs-3 text-black mb-5">
+                <p className="lead fs-3 text-white mb-5">
                   Trusted caregivers delivering comfort, dignity and personalized support
                 </p>
                 <Link to="/contact">
@@ -113,7 +152,7 @@ const Home = () => {
                     size="lg" 
                     className="px-5 py-3"
                   >
-                    Book Your Visit 
+                    Book Your Visit
                   </Button>
                 </Link>
               </div>
@@ -151,7 +190,7 @@ const Home = () => {
         </Container>
       </section>
 
-        <Testimonials />
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="section-padding bg-image">
@@ -161,24 +200,22 @@ const Home = () => {
               <h2 className="display-5 fw-bold text-white mb-4">
                 Ready to Experience Exceptional Care?
               </h2>
-              {/* <p className="lead text-black mb-5">
-                Contact us today to schedule a consultation and learn how our services 
-                can make a difference in your life.
-              </p> */}
-              <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <Button 
-                variant="primary-orange" 
-                size="lg" 
-                className="px-5 py-3"
+              <Link 
+                to="/contact" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
-              Start Your Care Consultation
-              </Button>
+                <Button 
+                  variant="primary-orange" 
+                  size="lg" 
+                  className="px-5 py-3"
+                >
+                  Request Your Free Consultation
+                </Button>
               </Link>
             </Col>
           </Row>
         </Container>
       </section>
-
     </>
   );
 };
