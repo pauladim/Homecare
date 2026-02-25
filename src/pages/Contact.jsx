@@ -262,15 +262,17 @@ const templateParams = {
                     />
                   </Form.Group>
                   
-                  <Button 
-                    variant="primary-orange" 
-                    type="submit" 
-                    size="lg" 
-                    className="px-5 py-3"
-                  >
-                    <Send className="me-2" />
-                    Send Message
-                  </Button>
+                  <div className="text-center">
+                    <Button 
+                      variant="primary-orange" 
+                      type="submit" 
+                      size="lg" 
+                      className="px-5 py-3 mx-auto d-block"
+                    >
+                      <Send className="me-2" />
+                      Send Message
+                    </Button>
+                  </div>
                 </Form>
               </Card.Body>
             </Card>
