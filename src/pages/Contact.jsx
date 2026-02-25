@@ -225,19 +225,20 @@ const templateParams = {
                   <Row>
                     <Col md={6} className="mb-3">
                       <Form.Group controlId="formPhone">
-                        <Form.Label className="text-black">Phone Number</Form.Label>
+                        <Form.Label className="text-black">Phone Number *</Form.Label>
                         <Form.Control
                           type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="Enter your phone number"
+                          required
                         />
                       </Form.Group>
                     </Col>
                     <Col md={6} className="mb-3">
                       <Form.Group controlId="formBookingDate">
-                        <Form.Label className="text-black">Preferred Booking Date</Form.Label>
+                        <Form.Label className="text-black">Preferred Booking Date *</Form.Label>
                         <Form.Control
                           type="date"
                           name="bookingDate"
